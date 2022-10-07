@@ -6,12 +6,12 @@ import DataTableExtensions from "react-data-table-component-extensions";
 import "react-data-table-component-extensions/dist/index.css";
 import Alert from '@material-ui/core/Alert';
 import Stack from '@material-ui/core/Stack';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPen } from '@fortawesome/free-solid-svg-icons';
+import { Redirect } from "react-router-dom";
 
 const CowList = () => {
     const [cows, setCows] = useState([]);
+    const [id, setId] = useState('');
+    const [redirState, setState ] = useState(false);
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
 
@@ -19,6 +19,7 @@ const CowList = () => {
         axios.get('http://localhost:8080/cow/')
         .then((res) => {
             console.log(res.data)
+            setId(res.data.idVaca);
             setCows(res.data);
         })
         .catch((e) => {
@@ -32,6 +33,7 @@ const CowList = () => {
     useEffect(() =>{
         fetch();
     },[])
+
 
     const columns = [
         {
@@ -68,18 +70,6 @@ const CowList = () => {
             name: "Partos",   
             selector: "numeroPartos",
             sortable: true
-        },
-        {
-            name: "acciones",   
-            sortable: true,
-            selector: null,
-            right: true,
-            cell: (d) => [
-                <i 
-                    key={d.title}>
-                        <FontAwesomeIcon icon={faPen} className="fas fa-fw i"/>
-                </i>
-            ]
         }
         
     ];
@@ -90,7 +80,7 @@ const CowList = () => {
         columns,
         data
     };
-
+    
     if (loading) return(
         <div className="text-center">
             <div className="spinner-border" role="status">
@@ -106,6 +96,9 @@ const CowList = () => {
         </div>
     )
 
+    let redirecting = redirState ? (<Redirect push to={`/cowedit/${id}`}/>) : '';
+
+
     return(
         <div className="container-fluid">
             <div className="table-responsive">
@@ -114,13 +107,18 @@ const CowList = () => {
                         <DataTable
                         columns={columns}
                         data={cows}
+                        onRowClicked = { cows => {
+                            setState(true);
+                            setId(cows.idVaca)
+                        }}
                         noHeader
-                        defaultSortField="id"
+                        defaultSortField="idVaca"
                         defaultSortAsc={false}
                         pagination
                         highlightOnHover
                         />
                     </DataTableExtensions>
+                    {redirecting}
                 </div>
             </div>
         </div>

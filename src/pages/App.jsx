@@ -11,6 +11,7 @@ import Login from './Login';
 import Modules from '../components/Modules';
 import Register from './Register';
 import Cow from './Cow';
+import CowEdit from '../components/Cow/CowEdit';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                     <Route exact path="/dashboard"><Dashboard/></Route>
                     <Route exact path="/modules"><Modules /></Route>
                     <Route exact path="/cow"><Cow /></Route>
+                    <Route path="/cowedit"><CowEdit /></Route>
                   </Layout>
               </Switch>
             
