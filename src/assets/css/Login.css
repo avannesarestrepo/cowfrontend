@@ -1,0 +1,231 @@
+
+body {
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+label, input {
+    font-family: 'Inria Sans' !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+    font-size: 24px !important;
+    line-height: 29px !important;
+}
+
+
+@media screen and (min-width:600px){
+    .container-login {
+        display: flex !important;
+        margin-top: 70px !important;
+        margin-left: 90px !important;
+        margin-right: 90px !important;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        border-radius: 40px !important;
+        height: 600px !important;
+    }   
+
+    .image-logo {
+        position: absolute !important;
+        width: 292px !important;
+        height: 100px !important;
+        left: 250px !important;
+        top: 130px !important;
+    }
+
+    .image-login {
+        position: absolute !important;
+        width: 600px !important;
+        top: 50px !important;
+        left: 390px !important;
+    }
+    
+    .label-usuario {
+        position: absolute !important;
+        width: 117px !important;
+        height: 48px !important;
+        left: 210px !important;
+        top: 250px !important;
+    }
+
+    .label-password {
+        position: absolute !important;
+        width: 115px !important;
+        height: 29px !important;
+        left: 210px !important;
+        top: 350px !important;
+    }
+
+    .input-usuario {
+        position: absolute !important;
+        width: 372px !important;
+        height: 45px !important;
+        left: 210px !important;
+        top: 280px !important;
+        background: #FFFFFF !important;
+        border: 2px solid #6AA6FF !important;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        border-radius: 5px !important;
+    }
+
+    .input-password {
+        position: absolute !important;
+        width: 372px !important;
+        height: 45px !important;
+        left: 210px !important;
+        top: 380px !important;
+        background: #FFFFFF !important;
+        border: 2px solid #6AA6FF !important;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        border-radius: 5px !important;
+    }
+
+    .icon-usuario {
+        position: absolute !important;
+        width: 48px !important;
+        height: 48px !important;
+        left: 532px !important;
+        top: 282px !important;
+    }
+
+    .icon-password {
+        position: absolute !important;
+        width: 48px !important;
+        height: 48px !important;
+        left: 532px !important;
+        top: 382px !important;
+    }    
+
+    .button-iniciar {
+        position: absolute !important;
+        width: 380px !important;
+        height: 38px !important;
+        left: 210px !important;
+        top: 460px !important;
+
+        background: #2D049A !important;
+        border: 4px solid #2D049A !important;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        border-radius: 5px !important;
+
+        font-family: 'Inter' !important;
+        font-style: normal !important;
+        font-weight: 800 !important;
+        font-size: 28px !important;
+        line-height: 34px !important;
+        text-align: center !important;
+        text-decoration: none !important;
+
+        color: #FFFFFF !important;
+    }
+
+    .hipervinculo {
+        position: absolute !important;
+        width: 293px !important;
+        height: 24px !important;
+        left: 329px !important;
+        top: 530px !important;
+
+        font-family: 'Inter' !important;
+        font-style: normal !important;
+        font-weight: 800 !important;
+        font-size: 20px !important;
+        line-height: 24px !important;
+
+        color: #2D049A !important;
+    }
+}
+
+@media screen and (max-width:1560px) {
+    .image-login {
+        position: absolute !important;
+        width: 500px !important;
+        top: 50px !important;
+        left: 320px !important;
+    }
+
+    .container-login {
+        display: flex !important;
+        margin-top: 70px !important;
+        margin-left: 90px !important;
+        margin-right: 90px !important;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        border-radius: 40px !important;
+        height: 500px !important;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .image-login {
+        position: absolute !important;
+        width: 600px !important;
+        top: 50px !important;
+        left: 290px !important;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .image-login {
+        position: absolute !important;
+        width: 5px !important;
+        height: 5px !important;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .image-logo {
+        display: flex !important;
+        position: absolute !important;
+        width: 292px !important;
+        height: 100px !important;
+        left: 50px !important;
+        top: 130px !important;
+    }
+
+    .image-login {
+        position: absolute !important;
+        width: 5px !important;
+        height: 5px !important;
+    }
+
+    .label-usuario {
+        position: absolute !important;
+        width: 117px !important;
+        height: 48px !important;
+        left: 21px !important;
+        top: 282px !important;
+    }
+
+    .label-password {
+        position: absolute !important;
+        width: 115px !important;
+        height: 29px !important;
+        left: 37px !important;
+        top: 380px !important;
+    }
+
+    .input-usuario {
+        position: absolute !important;
+        width: 300px !important;
+        height: 52px !important;
+        left: 37px !important;
+        top: 310px !important;
+        background: #FFFFFF !important;
+        border: 2px solid #6AA6FF !important;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        border-radius: 5px !important;
+    }
+
+    .input-password {
+        position: absolute !important;
+        width: 300px !important;
+        height: 52px !important;
+        left: 37px !important;
+        top: 410px !important;
+        background: #FFFFFF !important;
+        border: 2px solid #6AA6FF !important;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        border-radius: 5px !important;
+    }
+}
+
+
