@@ -2,7 +2,7 @@ import React from "react";
 import '../assets/css/Register.css';
 import ImageRegister from '../assets/img/imagen-register.svg';
 import { Link } from "react-router-dom";
-import RegisterForm from "../components/RegisterForm";
+import RegisterForm from "../components/Login/RegisterForm";
 
 const Register = () =>{
     return(

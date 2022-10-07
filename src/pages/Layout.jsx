@@ -1,6 +1,6 @@
 import React from 'react';
-import TopBar from '../components/TopBar';
-import Menu from '../components/Menu';
+import TopBar from '../components/Layout/TopBar';
+import Menu from '../components/Layout/Menu';
 
 
 const Layout = (props) => {

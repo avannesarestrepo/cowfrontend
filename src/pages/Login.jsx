@@ -1,7 +1,7 @@
 import React from "react";
 import '../assets/css/Login.css';
 import ImageLogin from '../assets/img/imagen-login.svg';
-import LoginForm from "../components/LoginForm";
+import LoginForm from "../components/Login/LoginForm";
 
 const Login = () => {
     return (

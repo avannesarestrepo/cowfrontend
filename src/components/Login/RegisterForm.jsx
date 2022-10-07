@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Logo from '../assets/img/Logo.png';
-import iconEye from '../assets/img/icons/Eye.png';
+import Logo from '../../assets/img/Logo.png';
+import iconEye from '../../assets/img/icons/Eye.png';
 import Axios from 'axios';
 
 const RegisterForm = () => {

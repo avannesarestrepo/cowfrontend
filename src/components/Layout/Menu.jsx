@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDesktop, faChevronCircleRight, faTachometerAlt, faUsers, faSitemap, faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faCow , faChevronCircleRight, faTachometerAlt, faUsers, faSitemap, faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
 const Menu = () => {
     return(
         <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             <div className="sidebar-brand d-flex align-items-center justify-content-center" >
                 <div className="sidebar-brand-icon rotate-n-15">
-                    <FontAwesomeIcon icon={faDesktop}/>
+                    <FontAwesomeIcon icon={faCow}/>
+                    <span>Cow</span>
                 </div>
-                <div className="sidebar-brand-text mx-3">Cow</div>
             </div> 
 
             {/* Menu options Dashboard*/}
@@ -34,13 +34,14 @@ const Menu = () => {
             <li className="nav-item">
                 <Link to="/cow" className="nav-link">
                     <FontAwesomeIcon icon={faSitemap} className="fas fa-fw i" />
+                    <FontAwesomeIcon icon={faCow} className="fas fa-fw i" />
                     <span>Cow</span>
                 </Link>
             </li>
 
             {/* Menu options Setting*/}
             <hr className="sidebar-divider"/>
-
+ 
             <div className="sidebar-heading">
                 Parameters
             </div>

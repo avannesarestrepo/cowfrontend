@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { createBrowserHistory } from 'history';
-import Logo from '../assets/img/Logo.png';
-import iconUser from '../assets/img/icons/User.png';
-import iconEye from '../assets/img/icons/Eye.png';
+import Logo from '../../assets/img/Logo.png';
+import iconUser from '../../assets/img/icons/User.png';
+import iconEye from '../../assets/img/icons/Eye.png';
 import { useState } from "react";
 import Axios from "axios";
 
