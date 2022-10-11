@@ -56,7 +56,7 @@ const RegisterForm = () => {
                 <img src={Logo} alt="Logo" className="image-logo-register"/>
                 
                 <div className="form-class">
-                    <label>Número Documento</label><br/>
+                    <label>ID</label><br/>
                     <select name="tipoDocumento" id="tipoDocumento" onChange={handleInputChange} value={user.tipoDocumento} required>
                         <option></option>
                         <option value="CC">CC</option>
@@ -74,7 +74,7 @@ const RegisterForm = () => {
                         required
                     /><br/>
 
-                    <label>Nombre Completo</label><br/>
+                    <label>Full Name</label><br/>
                     <input 
                         type="text" 
                         id="nombreCompleto" 
@@ -84,7 +84,7 @@ const RegisterForm = () => {
                         required
                     /><br/>
                     
-                    <label>Correo Electrónico</label><br/>
+                    <label>Email</label><br/>
                     <input 
                         type="text" 
                         id="correoElectronico" 
@@ -94,7 +94,7 @@ const RegisterForm = () => {
                         required
                     /><br/>
                     
-                    <label>Contraseña</label><br/>
+                    <label>Password</label><br/>
                     <input 
                         type={shown ? 'text' : 'password'} 
                         id="contrasena" 
@@ -107,7 +107,7 @@ const RegisterForm = () => {
                     <img src={iconEye} className="icon-password-register" alt="iconPassword" onClick={switchShown}/>
                 </div>
 
-                <button className="button-register" onClick={e => saveUser(e)}>Registrarse</button>
+                <button className="button-register" onClick={e => saveUser(e)}>Sign Up</button>
 
             </form>
         </>

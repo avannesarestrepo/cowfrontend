@@ -14,7 +14,7 @@ const Register = () =>{
                     <img src={ImageRegister} alt="ImageLogin" className="image-register"/>
                 </div>
 
-                <Link to="/" className="hipervinculo-inicio">Iniciar Sesión</Link>
+                <Link to="/" className="hipervinculo-inicio">Sign In</Link>
             </div>
         </>
     )

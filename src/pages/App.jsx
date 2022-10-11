@@ -5,7 +5,7 @@ import '../assets/css/sbadmin2.css';
 
 import Layout from './Layout';
 import Dashboard from './Dashboard';
-import NotFound from './NotFound';
+//import NotFound from './NotFound';
 
 import Login from './Login';
 import Modules from '../components/Modules';

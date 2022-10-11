@@ -38,37 +38,37 @@ const CowList = () => {
     const columns = [
         {
             name: "Id",
-            selector: "idVaca",
+            selector: row => row.idVaca,
             sortable: true
         },
         {
             name: "Nombre",   
-            selector: "nombre",
+            selector: row => row.nombre,
             sortable: true
         },
         {
             name: "Raza",   
-            selector: "raza",
+            selector: row => row.raza,
             sortable: true
         },
         {
             name: "Mamá",   
-            selector: "nombreMama",
+            selector: row => row.nombreMama,
             sortable: true
         },
         {
             name: "Papá",   
-            selector: "nombrePapa",
+            selector: row => row.nombrePapa,
             sortable: true
         },
         {
             name: "Nacimiento",   
-            selector: "fechaNacimiento",
+            selector: row => row.fechaNacimiento,
             sortable: true
         },
         {
             name: "Partos",   
-            selector: "numeroPartos",
+            selector: row => row.numeroPartos,
             sortable: true
         }
         

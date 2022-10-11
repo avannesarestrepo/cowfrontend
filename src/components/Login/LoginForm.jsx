@@ -48,7 +48,7 @@ function LoginForm () {
             <form>
                 <img src={Logo} alt="Logo" className="image-logo"/>
 
-                <label className="label-usuario">Usuario</label>
+                <label className="label-usuario">Username</label>
                 <input 
                     type="number" 
                     name="user" 
@@ -58,7 +58,7 @@ function LoginForm () {
                     value = {user}
                 />
                 <img src={iconUser} className="icon-usuario" alt="iconUsuario"/>
-                <label className="label-password">Contraseña</label>
+                <label className="label-password">Password</label>
                 <input 
                     type={shown ? 'text' : 'password'} 
                     name="password" 
@@ -70,10 +70,10 @@ function LoginForm () {
                 />
                 <img src={iconEye} className="icon-password" alt="iconPassword" onClick={switchShown}/>
                 
-                <button className="button-iniciar" onClick={e => login(e)}>Iniciar</button>
+                <button className="button-iniciar" onClick={e => login(e)}>Log in</button>
             </form>
 
-            <Link className="hipervinculo crearCuenta" to="/register">Crear una cuenta</Link>
+            <Link className="hipervinculo crearCuenta" to="/register">Create Account</Link>
         </>
     )
 }
