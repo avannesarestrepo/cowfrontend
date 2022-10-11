@@ -4,16 +4,17 @@ import axios from "axios";
 import Alert from '@material-ui/core/Alert';
 import Stack from '@material-ui/core/Stack';
 
-const CowEdit = () => {
-    const [cow, setCow] = useState([]);
+const CowGestation = () => {
+    const [cowGestation, setCowGestation] = useState([]);
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
     const { id } = useParams();
 
     const fetch = async () => {
-        axios.get(`http://localhost:8080/cow/${id}`)
+        console.log(id);
+        axios.get(`http://localhost:8080/cowgestation/${id}`)
         .then((res) => {
-            setCow(res.data.object);
+            setCowGestation(res.data.object);
         })
         .catch((e) => {
             setError(e);
@@ -29,9 +30,9 @@ const CowEdit = () => {
 
     const handleInputChange = event => {
         const { name, value } = event.target;
-        setCow({ ...cow, [name]: value });
+        setCowGestation({ ...cowGestation, [name]: value });
     };
-    
+
     if (loading) return(
         <div className="text-center">
             <div className="spinner-border" role="status">
@@ -51,109 +52,69 @@ const CowEdit = () => {
         <>
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-sm-10"></div>
-                    <div className="col-sm-2 ">
-                        <Link to={"/cowGestation/"+ cow.idVaca} className="btn btn-info float-right">Gestation Dates</Link>
-                    </div>
-                </div>
-                <div className="row">
                     <div className="col-sm-6">
-                        <label htmlFor="validationCustom01">Id</label>
+                        <label htmlFor="validationCustom01">IdVaca</label>
                         <input 
                             type="text" 
                             className="form-control" 
                             id="validationCustom01" 
                             placeholder="Id" 
-                            value={cow.idVaca} 
+                            value={cowGestation.idVaca} 
                             disable="true" />
                     </div>
                     <div className="col-sm-6">
-                        <label htmlFor="validationCustom01">Name Cow</label>
+                        <label htmlFor="validationCustom01">Fecha Celo</label>
                         <input 
-                            type="text" 
+                            type="date" 
                             className="form-control" 
                             id="validationCustom01" 
-                            placeholder="FullName" 
+                            placeholder="" 
                             onChange={handleInputChange}
-                            defaultValue={cow.nombre} 
+                            defaultValue={cowGestation.fechaCelo} 
                             required />
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-sm-6">
-                        <label htmlFor="validationCustom01">Breed</label>
+                        <label htmlFor="validationCustom01">Fecha Inseminación</label>
                         <input 
-                            type="text" 
+                            type="date" 
                             className="form-control" 
                             id="validationCustom01" 
-                            placeholder="FullName" 
+                            placeholder="" 
                             onChange={handleInputChange}
-                            defaultValue={cow.raza} 
+                            defaultValue={cowGestation.fechaInseminacion} 
                             required />
                     </div>
                     <div className="col-sm-6">
-                        <label htmlFor="validationCustom01">Birth Date</label>
+                        <label htmlFor="validationCustom01">Fecha Secado</label>
                         <input 
                             type="date" 
                             className="form-control" 
                             id="validationCustom01" 
                             placeholder="FullName" 
                             onChange={handleInputChange}
-                            defaultValue={cow.fechaNacimiento} 
+                            defaultValue={cowGestation.fechaSecado} 
                             required />
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-sm-6">
-                        <label htmlFor="validationCustom01">Name Mom</label>
-                        <input 
-                            type="text" 
-                            className="form-control" 
-                            id="validationCustom01" 
-                            placeholder="FullName" 
-                            onChange={handleInputChange}
-                            defaultValue={cow.nombreMama} 
-                            required />
-                    </div>
-                    <div className="col-sm-6">
-                        <label htmlFor="validationCustom01">Name Dad</label>
-                        <input 
-                            type="text" 
-                            className="form-control" 
-                            id="validationCustom01" 
-                            placeholder="FullName" 
-                            onChange={handleInputChange}
-                            defaultValue={cow.nombrePapa} 
-                            required />
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-sm-6">
-                        <label htmlFor="validationCustom01">Vaccine date Aftosa</label>
+                        <label htmlFor="validationCustom01">Fecha Parto</label>
                         <input 
                             type="date" 
                             className="form-control" 
                             id="validationCustom01" 
                             placeholder="FullName" 
                             onChange={handleInputChange}
-                            defaultValue={cow.fechaVacunaAftosa} 
-                            required />
-                    </div>
-                    <div className="col-sm-6">
-                        <label htmlFor="validationCustom01">Vaccine Date Brucellosis</label>
-                        <input 
-                            type="date" 
-                            className="form-control" 
-                            id="validationCustom01" 
-                            placeholder="FullName" 
-                            onChange={handleInputChange}
-                            defaultValue={cow.fechaVacunaBrucelosis} 
+                            defaultValue={cowGestation.fechaParto} 
                             required />
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-sm-12 mt-4 text-center">
                         <button className="btn btn-info">Save</button>
+                        <Link to={"/cowedit/"+ cowGestation.idVaca} className="btn btn-info ml-2">Volver</Link>
                     </div>
                 </div>
             </div>
@@ -161,4 +122,4 @@ const CowEdit = () => {
     )
 }
 
-export default CowEdit;
+export default CowGestation;

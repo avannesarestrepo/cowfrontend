@@ -12,6 +12,7 @@ import Modules from '../components/Modules';
 import Register from './Register';
 import Cow from './Cow';
 import CowEdit from '../components/Cow/CowEdit';
+import CowGestation from '../components/Cow/CowGestation';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                     <Route exact path="/modules"><Modules /></Route>
                     <Route exact path="/cow"><Cow /></Route>
                     <Route path="/cowedit/:id"><CowEdit /></Route>
+                    <Route path="/cowGestation/:id"><CowGestation /></Route>
                   </Layout>
               </Switch>
             
