@@ -23,6 +23,21 @@ const EventNotification = () => {
         })
     }
 
+    const updateEvent = (e) => {
+        axios.post('http://localhost:8080/events/', {
+            idNotification: e.idNotification,
+            idVaca: e.idVaca,
+            nombreEvento: e.nombreEvento,
+            fechaEvento: e.fechaEvento,
+            estado: true
+        })
+        .then(response => {
+            window.location.reload()
+        }).catch(e => {
+            setError(e);
+        })
+    }
+
     useEffect(() =>{
         fetch();
     },[]);
@@ -58,7 +73,7 @@ const EventNotification = () => {
                                             <h3>{event.fechaEvento}</h3>
                                         </div>
                                         <div className='flip-card-back'>
-                                            <button className='btn btn-warning mt-5'>Finalizar</button>
+                                            <button onClick={e => updateEvent(event)} className='btn btn-warning mt-5'>Finalizar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -81,10 +96,3 @@ const EventNotification = () => {
 }
 
 export default EventNotification;
-
-/*
-
-
-
-
-*/
