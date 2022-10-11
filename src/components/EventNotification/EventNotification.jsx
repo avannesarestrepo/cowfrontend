@@ -11,7 +11,7 @@ const EventNotification = () => {
     const [loading, setLoading] = useState(true);
 
     const fetch = async () => {
-        axios.get('http://localhost:8080/events/')
+        axios.get('http://localhost:8080/events')
         .then((res) => {
             setEvent(res.data);
         })
