@@ -64,7 +64,7 @@ const EventNotification = () => {
                 {
                     event.map(event => 
                         event.estado === false ?
-                            <div className='col-sm-2 mt-5'>
+                            <div key={event.id} className='col-sm-2 mt-5'>
                                 <div className='flip-card'>
                                     <div className='flip-card-inner'>
                                         <div className='flip-card-front'>
@@ -79,7 +79,7 @@ const EventNotification = () => {
                                 </div>
                             </div>    
                         : 
-                            <div className='col-sm-2 mt-5'>
+                            <div key={event.id} className='col-sm-2 mt-5'>
                                 <div className='flip-card-inner'>
                                     <div className='flip-card-front-true'>
                                         <h3><strong>{event.idVaca}</strong></h3>

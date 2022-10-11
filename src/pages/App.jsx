@@ -25,7 +25,7 @@ function App() {
                     <Route exact path="/dashboard"><Dashboard/></Route>
                     <Route exact path="/modules"><Modules /></Route>
                     <Route exact path="/cow"><Cow /></Route>
-                    <Route path="/cowedit"><CowEdit /></Route>
+                    <Route path="/cowedit/:id"><CowEdit /></Route>
                   </Layout>
               </Switch>
             
