@@ -48,12 +48,19 @@ const CowEdit = () => {
     )
 
     return(
-        <>
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-sm-10"></div>
-                    <div className="col-sm-2 ">
-                        <Link to={"/cowGestation/"+ cow.idVaca} className="btn btn-info float-right">Gestation Dates</Link>
+        <div className="container-fluid">
+            <div className="container my-3 p-5 bg-white">
+            <nav aria-label="breadcrumb">
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item active" aria-current="page">Información vaca</li>
+                    <li className="breadcrumb-item"><Link to={`/cowgestation/`+id}>Fechas gestación</Link></li>
+                </ol>
+            </nav>
+                
+            <div className="row">
+                    <div className="col-sm-9"></div>
+                    <div className="col-sm-3">
+                        <Link to={"/cowGestation/"+ cow.idVaca} className="btn btn-info float-right mr-4">Gestation Dates</Link>
                     </div>
                 </div>
                 <div className="row">
@@ -61,7 +68,7 @@ const CowEdit = () => {
                         <label htmlFor="validationCustom01">Id</label>
                         <input 
                             type="text" 
-                            className="form-control" 
+                            className="form-control rounded-pill" 
                             id="validationCustom01" 
                             placeholder="Id" 
                             value={cow.idVaca} 
@@ -71,7 +78,7 @@ const CowEdit = () => {
                         <label htmlFor="validationCustom01">Name Cow</label>
                         <input 
                             type="text" 
-                            className="form-control" 
+                            className="form-control rounded-pill" 
                             id="validationCustom01" 
                             placeholder="FullName" 
                             onChange={handleInputChange}
@@ -84,7 +91,7 @@ const CowEdit = () => {
                         <label htmlFor="validationCustom01">Breed</label>
                         <input 
                             type="text" 
-                            className="form-control" 
+                            className="form-control rounded-pill" 
                             id="validationCustom01" 
                             placeholder="FullName" 
                             onChange={handleInputChange}
@@ -95,7 +102,7 @@ const CowEdit = () => {
                         <label htmlFor="validationCustom01">Birth Date</label>
                         <input 
                             type="date" 
-                            className="form-control" 
+                            className="form-control rounded-pill" 
                             id="validationCustom01" 
                             placeholder="FullName" 
                             onChange={handleInputChange}
@@ -108,7 +115,7 @@ const CowEdit = () => {
                         <label htmlFor="validationCustom01">Name Mom</label>
                         <input 
                             type="text" 
-                            className="form-control" 
+                            className="form-control rounded-pill" 
                             id="validationCustom01" 
                             placeholder="FullName" 
                             onChange={handleInputChange}
@@ -119,7 +126,7 @@ const CowEdit = () => {
                         <label htmlFor="validationCustom01">Name Dad</label>
                         <input 
                             type="text" 
-                            className="form-control" 
+                            className="form-control rounded-pill" 
                             id="validationCustom01" 
                             placeholder="FullName" 
                             onChange={handleInputChange}
@@ -132,7 +139,7 @@ const CowEdit = () => {
                         <label htmlFor="validationCustom01">Vaccine date Aftosa</label>
                         <input 
                             type="date" 
-                            className="form-control" 
+                            className="form-control rounded-pill" 
                             id="validationCustom01" 
                             placeholder="FullName" 
                             onChange={handleInputChange}
@@ -143,7 +150,7 @@ const CowEdit = () => {
                         <label htmlFor="validationCustom01">Vaccine Date Brucellosis</label>
                         <input 
                             type="date" 
-                            className="form-control" 
+                            className="form-control rounded-pill" 
                             id="validationCustom01" 
                             placeholder="FullName" 
                             onChange={handleInputChange}
@@ -157,7 +164,7 @@ const CowEdit = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
