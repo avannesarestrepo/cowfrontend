@@ -4,7 +4,6 @@ import { createBrowserHistory } from 'history';
 import axios from "axios";
 import Alert from '@material-ui/core/Alert';
 import Stack from '@material-ui/core/Stack';
-import { collapseClasses } from "@material-ui/core";
 
 const CowEdit = () => {
     const initialUserState = {
@@ -120,6 +119,7 @@ const CowEdit = () => {
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item active" aria-current="page">Información vaca</li>
                             <li className="breadcrumb-item"><Link to={`/cowgestation/`+id}>Fechas gestación</Link></li>
+                            <li className="breadcrumb-item"><Link to={`/event/`+id}>Eventos</Link></li>
                         </ol>
                     </nav>
                     :

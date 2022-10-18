@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import { createBrowserHistory } from 'history';
 import axios from "axios";
 import Alert from '@material-ui/core/Alert';
 import Stack from '@material-ui/core/Stack';
@@ -9,6 +10,7 @@ const CowGestation = () => {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
     const { id } = useParams();
+    const broswerHistory = createBrowserHistory();
 
     const fetch = async () => {
         axios.get(`http://localhost:8080/cowgestation/${id}`)
@@ -31,6 +33,29 @@ const CowGestation = () => {
         const { name, value } = event.target;
         setCowGestation({ ...cowGestation, [name]: value });
     };
+
+    const save = async(e) => {
+        e.preventDefault();
+        
+        var data = {
+            idProcesoGestacionVaca: cowGestation.idProcesoGestacionVaca,
+            idVaca: cowGestation.idVaca, 
+            fechaCelo: cowGestation.fechaCelo,
+            fechaInseminacion: cowGestation.fechaInseminacion,
+            fechaParto: cowGestation.fechaParto,
+            fechaSecado: cowGestation.fechaSecado
+         }
+
+         try{
+            const datos = await axios.post(`http://localhost:8080/cowgestation`, data);
+            console.log(datos);
+            alert("Información actualizada exitosamente");
+            broswerHistory.push(`/cowgestation/`+ id);
+            window.location.reload(true);
+         }catch(error){
+            console.log(error);
+         }
+    }
 
     if (loading) return(
         <div className="text-center">
@@ -55,6 +80,7 @@ const CowGestation = () => {
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><Link to={`/cowedit/`+id}>Información vaca</Link></li>
                             <li className="breadcrumb-item active" aria-current="page">Fechas gestación</li>
+                            <li className="breadcrumb-item"><Link to={`/event/`+id}>Eventos</Link></li>
                         </ol>
                     </nav>
                     <div className="row">
@@ -63,7 +89,9 @@ const CowGestation = () => {
                             <input 
                                 type="text" 
                                 className="form-control disabled"  
-                                placeholder="Id" 
+                                placeholder="" 
+                                name="idVaca"
+                                onChange={handleInputChange}
                                 defaultValue={cowGestation.idVaca} 
                                 disable="true"/>
                         </div>
@@ -72,8 +100,8 @@ const CowGestation = () => {
                             <input 
                                 type="date" 
                                 className="form-control" 
-                                id="validationCustom01" 
                                 placeholder="" 
+                                name="fechaCelo"
                                 onChange={handleInputChange}
                                 defaultValue={cowGestation.fechaCelo} 
                                 required />
@@ -84,9 +112,9 @@ const CowGestation = () => {
                             <label htmlFor="validationCustom01">Fecha Inseminación</label>
                             <input 
                                 type="date" 
-                                className="form-control" 
-                                id="validationCustom01" 
+                                className="form-control"
                                 placeholder="" 
+                                name="fechaInseminacion"
                                 onChange={handleInputChange}
                                 defaultValue={cowGestation.fechaInseminacion} 
                                 required />
@@ -95,9 +123,9 @@ const CowGestation = () => {
                             <label htmlFor="validationCustom01">Fecha Secado</label>
                             <input 
                                 type="date" 
-                                className="form-control" 
-                                id="validationCustom01" 
-                                placeholder="FullName" 
+                                className="form-control"
+                                placeholder="" 
+                                name="fechaSecado"
                                 onChange={handleInputChange}
                                 defaultValue={cowGestation.fechaSecado} 
                                 required />
@@ -108,9 +136,9 @@ const CowGestation = () => {
                             <label htmlFor="validationCustom01">Fecha Parto</label>
                             <input 
                                 type="date" 
-                                className="form-control" 
-                                id="validationCustom01" 
-                                placeholder="FullName" 
+                                className="form-control"
+                                placeholder=""
+                                name="fechaParto" 
                                 onChange={handleInputChange}
                                 defaultValue={cowGestation.fechaParto} 
                                 required />
@@ -118,7 +146,7 @@ const CowGestation = () => {
                     </div>
                     <div className="row">
                         <div className="col-sm-12 mt-4 text-center">
-                            <button className="btn btn-info">Guardar</button>
+                            <button className="btn btn-info" onClick={e => save(e)}>Guardar</button>
                         </div>
                     </div>
                 </div>

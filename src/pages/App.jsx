@@ -13,6 +13,7 @@ import Register from './Register';
 import Cow from './Cow';
 import CowEdit from '../components/Cow/CowEdit';
 import CowGestation from '../components/Cow/CowGestation';
+import Event from '../components/EventNotification/EventByIdVaca';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                     <Route exact path="/cow"><Cow /></Route>
                     <Route path="/cowedit/:id"><CowEdit /></Route>
                     <Route path="/cowGestation/:id"><CowGestation /></Route>
+                    <Route path="/event/:id"><Event /></Route>
                   </Layout>
               </Switch>
             
