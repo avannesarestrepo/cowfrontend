@@ -18,7 +18,6 @@ const CowList = () => {
     const fetch = async () => {
         axios.get('http://localhost:8080/cow/')
         .then((res) => {
-            console.log(res.data)
             setId(res.data.idVaca);
             setCows(res.data);
         })

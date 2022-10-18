@@ -17,8 +17,7 @@ input {
     border: 2px solid #6AA6FF !important;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
     border-radius: 5px !important;
-    height: 35px !important;
-    width: 500px !important;
+    width: 400px;
 }
 
 select {
@@ -31,15 +30,12 @@ select {
 }
 
 .numberDocument {
-    width: 430px !important;
+    width: 330px !important;
 }
 
 @media screen and (min-width:600px) {
     .container-register {
         display: flex !important;
-        margin-top: 70px !important;
-        margin-left: 90px !important;
-        margin-right: 90px !important;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
         border-radius: 40px !important;
         height: 600px !important;
@@ -70,8 +66,8 @@ select {
         position: absolute !important;
         width: 32px !important;
         height: 32px !important;
-        left: 470px !important;
-        top: 300px !important;
+        left: 362px !important;
+        top: 297px !important;
     }  
 
     .button-register {
@@ -79,7 +75,7 @@ select {
         width: 500px !important;
         height: 45px !important;
         left: 190px !important;
-        top: 590px !important;
+        top: 600px !important;
 
         background: #2D049A !important;
         border: 4px solid #2D049A !important;
@@ -115,9 +111,6 @@ select {
 @media screen and (max-width:1560px) {
     .container-register {
         display: flex !important;
-        margin-top: 70px !important;
-        margin-left: 90px !important;
-        margin-right: 90px !important;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
         border-radius: 40px !important;
         height: 500px !important;
@@ -146,10 +139,10 @@ select {
     
     .button-register {
         position: absolute !important;
-        width: 500px !important;
+        width: 300px !important;
         height: 45px !important;
-        left: 160px !important;
-        top: 500px !important;
+        left: 200px !important;
+        top: 530px !important;
 
         background: #2D049A !important;
         border: 4px solid #2D049A !important;
@@ -169,8 +162,8 @@ select {
         position: absolute !important;
         width: 293px !important;
         height: 24px !important;
-        left: 350px !important;
-        top: 575px !important;
+        left: 320px !important;
+        top: 595px !important;
 
         font-family: 'Inter' !important;
         font-style: normal !important;
