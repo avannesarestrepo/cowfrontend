@@ -19,7 +19,7 @@ const Menu = () => {
             <li className="nav-item">
                 <Link to="/dashboard" className="nav-link">
                     <FontAwesomeIcon icon={faTachometerAlt} className="fas fa-fw i"/>
-                    <span>Dashboard</span>
+                    <span>Tablero</span>
                 </Link>
             </li>
 
@@ -27,7 +27,7 @@ const Menu = () => {
             <hr className="sidebar-divider"/>
 
             <div className="sidebar-heading">
-                Operation
+                Operación
             </div>
 
             {/* Menu options Assignments */}
@@ -35,7 +35,7 @@ const Menu = () => {
                 <Link to="/cow" className="nav-link">
                     <FontAwesomeIcon icon={faSitemap} className="fas fa-fw i" />
                     <FontAwesomeIcon icon={faCow} className="fas fa-fw i" />
-                    <span>Cow</span>
+                    <span>Vacas</span>
                 </Link>
             </li>
 
@@ -43,20 +43,20 @@ const Menu = () => {
             <hr className="sidebar-divider"/>
  
             <div className="sidebar-heading">
-                Parameters
+                Parametros
             </div>
 
             <li className="nav-item">
                 <Link to="/users" className="nav-link">
                     <FontAwesomeIcon icon={faUsers} className="fas fa-fw i" />
-                    <span>Users</span>
+                    <span>Usuarios</span>
                 </Link>
             </li>
 
             <li className="nav-item">
                 <Link to="/" className="nav-link">
                     <FontAwesomeIcon icon={faArrowCircleLeft} className="fas fa-fw i" />
-                    <span>Log out</span>
+                    <span>Cerrar Sesión</span>
                 </Link>
             </li>
             

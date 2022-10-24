@@ -224,9 +224,14 @@ const CowEdit = () => {
                     <div className="col-sm-1 mt-4 text-center">
                         <button className="btn btn-info" onClick={e => saveCow(e)}>Guardar</button>
                     </div>
+                    {
+                    id == 0 ?
+                    <div className="col-sm-1 mt-4 text-center" />
+                    :
                     <div className="col-sm-1 mt-4 text-center">
                         <button className="btn btn-danger" onClick={e => deleteCow(e)}>Eliminar</button>
                     </div>
+                    }
                     <div className="col-sm-5 mt-4 text-center"/>
                 </div>
             </div>

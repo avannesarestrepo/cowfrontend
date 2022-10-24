@@ -6,8 +6,8 @@ const Inicio = () => {
 
     return(
         <div className="container-fluid">
-            <h6 className='text text-info text-right mt-3'><strong>DATE: {fecha}</strong></h6>
-            <h1 className="text text-info text-center mt-3 "><strong>Event notification</strong></h1>
+            <h6 className='text text-info text-right mt-3'><strong>Fecha: {fecha}</strong></h6>
+            <h1 className="text text-info text-center mt-3 "><strong>Notificaciones</strong></h1>
 
             <EventNotification />
         </div>
